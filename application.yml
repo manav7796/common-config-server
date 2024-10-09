@@ -24,3 +24,13 @@ spring :
     hibernate :
       dialect : org.hibernate.dialect.PostgreSQLDialect
       format_sql : true
+
+microservice:
+  payment-service:
+    endpoints:
+      fetchPaymentDetailsById:
+        uri: http://PAYMENTSERVICE/payments/orderID/
+  user-service :
+    endpoints :
+      fetchOrderDetailsById :
+        uri : http://USERSERVICE/users/find/
